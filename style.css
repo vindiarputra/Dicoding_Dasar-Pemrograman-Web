@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(assets/background.jfif);
+}
+
+/* Navbar */
+.navbar {
+  padding: 0 2rem;
+  background-color: #333;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  list-style: none;
+}
+
+.navbar ul #icon-logo img {
+  border-radius: 50%;
+}
+
+.navbar ul li a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+}
+
+.navbar ul li a:hover {
+  background-color: none;
+  color: black;
+}
+
+.navbar ul li a:nth-child(3):hover,
+.navbar ul li a:nth-child(4):hover {
+  color: inherit;
+}
+
+/* dropdown */
+.dropdown {
+  display: flex;
+  border: 1px solid #ddd;
+  padding: 1rem 2rem;
+  background-color: #333;
+}
+
+.dropdown .menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dropdown .menu ul {
+  list-style: none;
+}
+
+.dropdown .menu ul li a {
+  color: whitesmoke;
+  padding: 0.5rem;
+}
+.dropdown .menu ul li {
+  padding: 0.8rem;
+}
+
+.dropdown .menu ul li a:hover {
+  color: #333;
+  background-color: white;
+  border-radius: 6px;
+}
+
+/* card */
+
+main {
+  display: flex;
+  padding-top: 5rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 18rem;
+  background-color: #424242;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-left: 30px;
+  margin: 1rem;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  top: -60%;
+  transform: skewY(390deg);
+}
+
+.card::after {
+  content: "corsair";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 6.5em;
+  color: #424242;
+}
+
+.card .card-sale {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.card .card-sale img {
+  max-width: 100%;
+  transition: 0.5s;
+}
+
+.card:hover .card-sale img {
+  max-width: 70%;
+}
+
+.card:hover .card-info .buy {
+  top: 10px;
+  opacity: 1;
+}
+
+.card .card-info {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  align-items: center;
+}
+
+.card .card-info h3 {
+  font-size: 18pxpx;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card .card-info .price {
+  font-size: 24px;
+  color: rgb(216, 211, 211);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.card .card-info .buy {
+  position: relative;
+  top: 200px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: black;
+  text-decoration: none;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card img {
+  width: 85%;
+}
+
+.card .card-title {
+  color: #d8d7d7;
+}
+
+/* Aside */
+
+aside {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+aside .container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside .container img {
+  width: 16rem;
+  text-align: center;
+  border-radius: 12px;
+}
+
+aside .container article {
+  width: 24rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-wrap: wrap;
+  background-color: #454040;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+aside .container article h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: rgb(216, 211, 211);
+}
+aside .container article p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  color: rgb(216, 211, 211);
+}
+
+
+/* footer */
+
+footer {
+  display: flex;
+  text-align: center;
+  margin-top: auto;
+  height: 7rem;
+  background-color: #333;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer #social-media .iconWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#social-media {
+  display: flex;
+}
+
+#social-media img {
+  width: 50px;
+  height: 50px;
+}
+
+#social-media .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact ul {
+  list-style: none;
+}
+
+#contact ul li:nth-child(2) a {
+  color: #d8d7d7;
+}
+
+#contact ul li:nth-child(2) a:hover {
+  color: aquamarine;
+}
+
+/* For Desktop View */
+@media screen and (max-width: 1024px) {
+  aside .container article {
+    width: 34rem;
+  }
+  aside .container article p {
+    padding: 0 2rem;
+  }
+}
+
+/* For Tablet View */
+@media screen and (max-width: 768px) {
+  aside .container article {
+    width: 28rem;
+  }
+  aside .container article p {
+    padding: 0 2rem;
+  }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-width: 480px) {
+  .navbar ul li {
+    display: none;
+  }
+
+  .card {
+    width: 15rem;
+    height: max-content;
+    padding: 0;
+  }
+  .card img {
+    width: auto;
+    margin-bottom: 3rem;
+  }
+
+  .navbar ul #hamburgerMenu {
+    display: flex;
+  }
+
+  aside {
+    width: 18rem;
+  }
+
+  aside .container {
+    margin: 0 auto;
+  }
+  aside .container article {
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+  }
+  aside .container article img {
+    width: 10rem;
+    margin: 0 auto;
+  }
+  aside .container article h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: whitesmoke;
+  }
+  aside .container article p {
+    font-size: 1rem;
+    color: whitesmoke;
+  }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+  aside {
+    width: 24rem;
+  }
+
+  aside .container {
+    margin: 0 auto;
+  }
+  aside .container article {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  aside .container article img {
+    width: 10rem;
+    margin: 0 auto;
+  }
+  aside .container article h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: whitesmoke;
+  }
+  aside .container article p {
+    font-size: 1rem;
+    color: whitesmoke;
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  main {
+    flex-wrap: wrap;
+  }
+}
